@@ -8,11 +8,29 @@ The npm packages we plan on using are [Cloudinary](https://www.npmjs.com/package
 <hr>
 
 
+
 ## User Story
 > * AS A person in a post-covid world, looking to meet new friends,
 > * I WANT to meet friends with different interests,
 > * SO THAT I can connect with new people and learn and experience new things.
 <hr>
+
+## Database structure
+* Table for users(includes user id, first name, last name, email, password, user image, and friends)
+* Table for interests(include interest id, and interest name)
+* Table called interest tags that contains interest ids and user ids we can use to link users and interests with a many to many relationship
+
+## Route structure
+* Basic get routes to serve the html.
+* Post route to create the user data.
+* Post route to login and logout.
+* Post route to collect user interests.
+* Post route to collect user image.
+* Put route to update user interests.
+* Get route to show user profile.
+* Get route to show Users and their interests.
+* Put route to update the Users friends object.
+* Delete route to remove the user information.
 
 
 ## Wireframe
