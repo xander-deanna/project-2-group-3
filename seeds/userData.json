@@ -1,0 +1,20 @@
+[
+    {
+        "first_name": "Tom",
+        "last_name": "Anderson",
+        "email": "tom@myspace.com",
+        "password": "password"
+    },
+    {
+        "first_name": "Dwayne",
+        "last_name": "Anderson",
+        "email": "dwayne@therock.com",
+        "password": "password"
+    },
+    {
+        "first_name": "Robert",
+        "last_name": "Downey Jr",
+        "email": "tony@stark.com",
+        "password": "password"
+    }
+]
