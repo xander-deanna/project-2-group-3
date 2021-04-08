@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Login Page</title>
+</head>
+
+
+<body>
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Sign Up
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" 
+  aria-hidden="true">
+    <div class="modal-dialog signin_dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <img src="images/frienemies.png" alt="">
+          <p>Registering to this website, you accept our terms of use and our<a href="#"> privacy policy</a> </p>
+        </div>
+        <div class="modal-body signin_modal">
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+              <button class="nav-link active" id="home-tab" data-toggle="tab" href= "#signup"  role="tab" 
+                 aria-controls="home" aria-selected="true">Sign Up</button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" id="profile-tab" data-toggle="tab" href= "#signin" role="tab" 
+                 aria-controls="profile" aria-selected="false">Sign In</button>
+            </li>
+          </ul>
+          <div class="social_login">
+              <p>With your social network</p>
+              <ul class="social_log">
+                  <li><img src="images/facebook_logo.svg" alt=""></li>
+                  <li><img src="images/google_plus.png" alt=""></li>
+                  <li><img src="images/twitter_logo.png" alt=""></li>
+              </ul>
+              <p>or</p>
+          </div>
+              <div class="tab-content signup_tab" id="myTabContent">
+                <div class="tab-pane fade show active" id="signup" role="tabpanel" aria-labelledby="home-tab">
+                  <form>
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="exampleInputText1" aria-describedby="textHelp" placeholder="Username">
+                  </div>
+                    <div class="form-group">
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                  </div>
+                  <button type="submit" class="btn btn-primary btn-block">Create An Account</button>
+                  <p class="signin_link" >Already Made a Frienemy? <a id="profile-tab" data-toggle="tab" href= "#signin" role="tab" 
+                    aria-controls="profile" aria-selected="false">Sign In</a></p>
+                </form>
+              </div>
+              <div class="tab-pane fade" id="signin" role="tabpanel" aria-labelledby="profile-tab">
+                <form>
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="exampleInputText1" aria-describedby="textHelp" placeholder="Username">
+                  </div>
+                  <div class="">
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                  </div>
+                  <p class="forgot_link"><a href="#">Forgot your Password ?</a></p>
+                  <button type="submit" class="btn btn-primary btn-block">Login</button>
+                  <p class="signin_link" >Dont have a Frienemy? <a id="home-tab" data-toggle="tab" href= "#signup"  role="tab" 
+                    aria-controls="home" aria-selected="true">Sign Up</a></p>
+                </form>
+              </div>
+              </div>
+          </div>
+        </div>
+    </div>
+  </div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
