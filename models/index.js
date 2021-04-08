@@ -1,15 +1,22 @@
 const Users = require('./Users');
 const Interests = require('./Interests');
-const Userinterests = require('./Userinterests')
+const UserInterests = require('./UserInterests')
 
 // Interests belongsTo Users
 Interests.belongsToMany(Users, {
-    through: Userinterests,
+    through: UserInterests,
     foreignKey: 'user_id',
   });
 
 // Users have many Interests
 Users.belongsToMany(Interests, {
-    through: Userinterests,
+    through: UserInterests,
     foreignKey: 'interest_id'
 });
+
+module.exports = {
+  Interests,
+  Users,
+  UserInterests,
+
+};
