@@ -11,7 +11,7 @@ class Users extends Model {
 
 Users.init(
     {
-      user_id: {
+      id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true,
@@ -36,7 +36,14 @@ Users.init(
           min: 8,  
           max: 16
         },
-      }
+      },
+      interest_id: {
+        type: DataTypes.INTEGER,
+        references: {
+          model: 'interests',
+          key: 'id',
+        },
+      },
     },
     {
       hooks: {

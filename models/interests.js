@@ -5,7 +5,7 @@ class Interests extends Model {}
 
 Interests.init(
     {
-      interest_id: {
+      id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true,
@@ -14,7 +14,14 @@ Interests.init(
       interest_name: {
         type: DataTypes.STRING,
         allowNull: false
-      }
+      },
+      user_id: {
+        type: DataTypes.INTEGER,
+        references: {
+          model: 'Users',
+          key: 'id',
+        },
+      },
     },
     {
       sequelize,
