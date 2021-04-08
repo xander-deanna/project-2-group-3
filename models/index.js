@@ -2,9 +2,8 @@ const Users = require('./Users');
 const Interests = require('./Interests');
 
 // Interests belongsTo Users
-Interests.belongsTo(Users, {
+Interests.belongsToMany(Users, {
     foreignKey: 'user_id',
-    onDelete: 'CASCADE',
   });
 
 // Users have many Interests
