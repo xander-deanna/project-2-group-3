@@ -37,13 +37,6 @@ Users.init(
           max: 16
         },
       },
-      interest_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'interests',
-          key: 'id',
-        },
-      },
     },
     {
       hooks: {
@@ -62,7 +55,7 @@ Users.init(
       timestamps: false,
       freezeTableName: true,
       underscored: true,
-      modelName: 'Users',
+      modelName: 'users',
     }
   );
   
