@@ -1,0 +1,31 @@
+ <main class="container my-3">
+    <div class="row">
+
+      <div class="col-md-8 col-sm-10">
+            <div class="row">
+              <div class="col-5">
+                <img class="img-fluid img-thumbnail" src="{{photo}}" alt="Picture of {{name}}" />
+                <h1 class="card-title border-bottom border-4">{{name}}</h1>
+              </div>
+              <div class="col-7">
+                <p>{{userDescription}}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="float-start me-2" >
+                </div> 
+                {{!-- This is going to hold interests --}}
+                <ul class="list-group list-group-flush links">
+                    {{#each interests as |interest|}}
+                  <li class="list-group-item">{{interest.name}}</li>
+                    {{/each}}
+                </ul>
+              </div>
+            </div>
+        
+      </div>
+      <!-- this is the empty space -->
+      <div class="col-md-4 col-sm-2">
+      </div>
+    </div>
