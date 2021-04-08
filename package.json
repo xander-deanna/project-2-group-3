@@ -27,7 +27,7 @@
     "mysql2": "^2.2.5",
     "nodemon": "^2.0.7",
     "randomcolor": "^0.6.2",
-    "sequelize": "^6.6.2"
+    "sequelize": "^6.6.2",
     "session": "^0.1.0"
   }
 }
