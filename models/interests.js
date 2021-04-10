@@ -15,13 +15,6 @@ Interests.init(
         type: DataTypes.STRING,
         allowNull: false
       },
-      user_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'Users',
-          key: 'id',
-        },
-      },
     },
     {
       sequelize,
