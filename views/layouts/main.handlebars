@@ -17,16 +17,48 @@
         <!-- <link rel="icon" type="image/png" sizes="32x32" href="#"> -->
         <!-- <link rel="icon" type="image/png" sizes="16x16" href="#"> -->
         
-        <!-- custom stylesheet (overwrites bootstrap in the cascade) -->
-        <link href="./assets/css/style.css" rel="stylesheet">
-        
         <!-- new tegomin google font (potential logo font) -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
+
+        <!-- custom stylesheet (overwrites bootstrap in the cascade) -->
+        <link href="./assets/css/style.css" rel="stylesheet">
     </head>
+
     <body>
-        <!-- potential icon for logo -->
-        <!-- <i class="fas fa-grin-squint"></i> -->
+    <!-- navbar -->
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <div class="container-fluid">
+                    <!--nav bar title/name-->
+                    <a class="navbar-brand" href="https://xander-deanna.github.io/project-2-group-3/">Frienemies <i class="fas fa-grin-squint"></i> </a>
+                    <!--nav button (for when collapsed)-->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!-- navbar items-->
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto mb-2 mb-md-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Profile</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Clashes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"  href="#">Friends</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"  href="#">Calendar</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
         {{{ body }}}
     </body>
 </html>
