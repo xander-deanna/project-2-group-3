@@ -4,6 +4,15 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
     try{
+      const userData = await Users.findAll( {
+        where: {
+          post_id: req.params.id
+        },
+        attributes: { exclude: ['password'] },
+        include: [{ model: Interests }],
+      });
+
+
         // Render Homepage
         res.render('homepage', { 
             logged_in: req.session.logged_in 

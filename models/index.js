@@ -14,6 +14,14 @@ Users.belongsToMany(Interests, {
     foreignKey: 'interest_id'
 });
 
+Users.hasMany(Friends, {
+  foreignKey:'friend_id'
+});
+
+Friend.belongsto(Users, {
+  foreighKey:'friend_id'
+});
+
 module.exports = {
   Interests,
   Users,
