@@ -1,6 +1,7 @@
 const Users = require('./Users');
 const Interests = require('./Interests');
 const UserInterests = require('./UserInterests')
+const UserFriends = require('./UserInterests')
 
 // Interests belongsTo many users, uses the User Interests table as the through point
 Interests.belongsToMany(Users, {
@@ -11,20 +12,25 @@ Interests.belongsToMany(Users, {
 // Users should belong to many interests, uses the User Interests table as the through point
 Users.belongsToMany(Interests, {
     through: UserInterests,
-    foreignKey: 'interest_id'
+    foreignKey: 'user_id'
+});
+// This is going to create a 
+Users.belongsToMany(Users, {
+  as: 'friends',
+  foreignKey:'user_id',
+  through: UserFriends
 });
 
-Users.hasMany(Friends, {
-  foreignKey:'friend_id'
-});
-
-Friend.belongsto(Users, {
-  foreighKey:'friend_id'
+Users.belongsToMany(Users, {
+  as: 'userFriends',
+  foreignKey:'friend_id',
+  through: UserFriends
 });
 
 module.exports = {
   Interests,
   Users,
   UserInterests,
+  UserFriends,
 
 };
