@@ -34,7 +34,7 @@ router.get('/profile', withAuth, async (req, res) => {
 
     const user = userData.get({ plain: true });
     //pull the list of available interests
-    const interestData = await interests.findAll({
+    const interestData = await Interests.findAll({
     });
 
     // Serialize data so the template can read it
