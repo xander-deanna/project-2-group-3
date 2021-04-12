@@ -1,6 +1,8 @@
-.logo {
-    font-family: 'New Tegomin', serif;
-    /* Use with <i class="fas fa-grin-squint"></i> icon */
+/* logo and navbar attributes */
+.navbar-brand {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #ffffff;
+  font-size: x-large;
 }
 
 /* The Modal (background) */
