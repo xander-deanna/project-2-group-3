@@ -1,7 +1,6 @@
-const Users = require('./Users');
-const Interests = require('./Interests');
-const UserInterests = require('./UserInterests')
-const UserFriends = require('./UserInterests')
+const Users = require('./users');
+const Interests = require('./interests');
+const UserInterests = require('./Userinterests')
 
 // Interests belongsTo many users, uses the User Interests table as the through point
 Interests.belongsToMany(Users, {
@@ -31,6 +30,5 @@ module.exports = {
   Interests,
   Users,
   UserInterests,
-  UserFriends,
 
 };
