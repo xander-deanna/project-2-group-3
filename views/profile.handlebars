@@ -46,3 +46,24 @@
     <div class="col-md-4 col-sm-2">
     </div>
   </div>
+    <i class="fas fa-cloud-upload-alt"> Make your user experience even richer by uploading a profile picture.</i>
+      <button id="upload_widget" class="cloudinary-button">Upload your picture!</button>
+
+    <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+  
+    <script type="text/javascript">
+  
+      var myWidget = cloudinary.createUploadWidget({
+        cloudName: 'superman123',
+        upload_preset: 'n5mndyvl',
+      }, (error, result) => {
+        if (result.event == "success") {
+          console.log(result.info) // result.info contains data from upload
+        }
+      })
+  
+      document.getElementById("upload_widget").addEventListener("click", function () {
+        myWidget.open();
+      }, false);
+  
+    </script>

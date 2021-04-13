@@ -56,7 +56,7 @@ router.get('/login', (req, res) => {
     return;
   }
 
-  res.render('login');
+  res.render('profile');
 });
 
 module.exports = router;
