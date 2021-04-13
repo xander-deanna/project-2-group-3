@@ -15,17 +15,17 @@ Users.belongsToMany(Interests, {
     foreignKey: 'user_id'
 });
 // This is going to create a 
-Users.belongsToMany(Users, {
-  as: 'friends',
-  foreignKey:'user_id',
-  through: UserFriends
-});
+// Users.belongsToMany(Users, {
+//   as: 'friends',
+//   foreignKey:'user_id',
+//   through: UserFriends
+// });
 
-Users.belongsToMany(Users, {
-  as: 'userFriends',
-  foreignKey:'friend_id',
-  through: UserFriends
-});
+// Users.belongsToMany(Users, {
+//   as: 'userFriends',
+//   foreignKey:'friend_id',
+//   through: UserFriends
+// });
 
 module.exports = {
   Interests,
