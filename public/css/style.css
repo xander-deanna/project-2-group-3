@@ -1,13 +1,49 @@
 /* ---------------- MAIN HANDLEBARS ---------------- */
 
+body {
+  background-color: #ececec;
+}
+
 /* logo and navbar attributes */
 .navbar-brand {
   font-family: 'Josefin Sans', sans-serif;
   color: #ffffff;
   font-size: x-large;
 }
+.navbar{
+  margin: 0%;
+  width: 100%;
+}
+.container-fluid {
+  margin: 0%;
+  width: 100%;
+}
 
-/* ------ CLASHES AND FRIENDS PAGE HANDLEBARS ------ */
+/* ------------------- LOGIN PAGE ------------------- */
+
+/* column padding */
+.add-padding-left {
+  padding-left: 10%;
+}
+.add-padding-right {
+  padding-right: 10%;
+}
+/* logo font */
+.logo {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 40px;
+  padding: 0px;
+  margin: 0px;
+}
+h1 {
+  padding: 0px;
+  margin: 0px;
+}
+.signup-btn {
+  font-size: large;
+}
+
+/* ------- CLASHES AND FRIENDS PAGE HANDLEBARS ------ */
 /* removes bullet from unordered list */
 ul {
   list-style-type: none;
