@@ -16,6 +16,14 @@ ul {
     color: #ffffff00;
 }
 
+/* resizes image */
+.user-image {  
+    height: 120px;
+    width: 120px;
+    border-radius: 60px;
+    border: #000000 2px;
+    margin: 20px;
+}
 
 /* The Modal (background) */
 .modal {

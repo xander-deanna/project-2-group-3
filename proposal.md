@@ -12,8 +12,8 @@
 <hr>
 
 ## Npm packages
-The npm packages we plan on using are [Cloudinary](https://www.npmjs.com/package/cloudinary) along with [Formidable](https://www.npmjs.com/package/formidable) for user-image uploading storage and retrival. 
-We may also impliment [Calandar-Link](https://www.npmjs.com/package/calendar-link) for meet-up scheduling, and [Randomcolor](https://www.npmjs.com/package/randomcolor) to generate colors for user profiles without a profile image.
+The npm package we plan on using aisre [Formidable](https://www.npmjs.com/package/formidable) for user-image uploading storage and retrival. 
+We may also impliment [Randomcolor](https://www.npmjs.com/package/randomcolor) to generate colors for user profiles without a profile image.
 <hr>
 
 ## Database structure
