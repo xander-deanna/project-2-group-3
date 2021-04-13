@@ -5,6 +5,18 @@
   font-size: x-large;
 }
 
+/* removes bullet from unordered list */
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+/* makes friend ID invisable */
+.friend-id {
+    color: #ffffff00;
+}
+
+
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
