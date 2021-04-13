@@ -30,6 +30,6 @@ module.exports = {
   Interests,
   Users,
   UserInterests,
-  UserFriends,
+  // UserFriends,
 
 };
