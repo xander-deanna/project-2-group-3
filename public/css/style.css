@@ -5,6 +5,18 @@
   font-size: x-large;
 }
 
+/* removes bullet from unordered list */
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+/* makes friend ID invisable */
+.friend-id {
+    color: #ffffff00;
+}
+
+
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
@@ -42,3 +54,103 @@
     text-decoration: none;
     cursor: pointer;
   }
+
+  /* ------ */
+
+  .ui_table {
+    padding: 3rem 0;
+}
+
+.collapse_area thead {
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+.collapse_area .table thead th {
+    color: #37913a;
+}
+.collapse_area .table {
+    border: 1px solid #e9ecef;
+}
+
+
+/* Modal CSS */
+.social_log {
+    text-align: center;
+}
+.social_log {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    justify-content: center;
+}
+.social_log li {
+    margin: 0 6px;
+}
+.social_log li img {
+    width: 40px;
+}
+.social_log p {
+    color: #8c8c8c;
+}
+.signin_modal .nav-tabs .nav-link {
+    background-color: #e5e5e5;
+    border-radius: 0;
+    font-weight: 600;
+    border-color: #fff0;
+    padding: 1.2rem 0;
+    font-size: 16px;
+}
+.signin_modal .nav-tabs .nav-link.active {
+    background-color: #fff;
+}
+.signin_modal .nav-tabs .nav-item {
+    width: 50%;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.signin_modal .nav-tabs {
+    border-bottom: none;
+}
+.signin_tab {
+    padding: 0 3rem;
+}
+.signin_tab input.form-control {
+    font-size: 12px;
+    color: #8c8c8c;
+    height: 40px;
+  }
+.signin_link {
+    text-align: center;
+    color: #8c8c8c;
+    margin-top: 0.5rem;
+}
+.forgot_link {
+    text-align: right;
+    font-size: 12px;
+}
+.signin_dialog .modal-header {
+    text-align: center;
+    display: block;
+}
+.signin_dialog .modal-header img {
+    width: 250px;
+    margin: auto;
+    margin-bottom: 0.5rem;
+}
+.signin_dialog .modal-header p {
+    color: #fff;
+    font-size: 14px;
+    padding: 0 1rem;
+}
+.signin_dialog .modal-header p a {
+    color: #fff;
+}
+.signin_dialog .modal-content {
+    background-color: transparent;
+    border: none;
+}
+.signin_dialog .modal-body {
+    background-color: #fff;
+    padding: 0;
+}
