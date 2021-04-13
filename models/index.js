@@ -1,5 +1,5 @@
-const Users = require('./Users');
-const Interests = require('./Interests');
+const Users = require('./users');
+const Interests = require('./interests');
 const UserInterests = require('./UserInterests')
 const UserFriends = require('./UserInterests')
 
