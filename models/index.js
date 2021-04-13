@@ -1,6 +1,6 @@
 const Users = require('./users');
 const Interests = require('./interests');
-const UserInterests = require('./userInterests')
+const UserInterests = require('./Userinterests')
 
 // Interests belongsTo many users, uses the User Interests table as the through point
 Interests.belongsToMany(Users, {
