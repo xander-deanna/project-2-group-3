@@ -47,3 +47,19 @@ app.use(routes);
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening on ', PORT));
 });
+
+app.post('/', (req, res) => {
+  const form = new formidable.IncomingForm()
+
+  form.parse(req)
+
+  form.on('fileBegin',function(name, file) {
+    file.path = __dirname + '/assets/uploads' + file.name
+  })
+
+  form.on('file', function (name, file) {
+    console.log('Uploaded file' + file.name)
+  })
+  //code to render a page wherever we want it to...
+  // res.sendFile(__dirname + 'views/login.handlebars')
+});
