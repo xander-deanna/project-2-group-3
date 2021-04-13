@@ -2,12 +2,12 @@ const { Model, DataTypes } = require('sequelize');
 
 const sequelize = require('../config/connection');
 
-class Userinterests extends Model {}
+class UserInterests extends Model {}
 
 
 
 // This model will host the foreign keys for the belongs to many association in the index.
-Userinterests.init(
+UserInterests.init(
   {
     //this model will allow us to reach interests through the user Id
     id: {
@@ -42,4 +42,4 @@ Userinterests.init(
   }
 );
 
-module.exports = Userinterests;
+module.exports = UserInterests;

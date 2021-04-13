@@ -5,7 +5,7 @@ const UserInterests = require('./Userinterests')
 // Interests belongsTo many users, uses the User Interests table as the through point
 Interests.belongsToMany(Users, {
     through: UserInterests,
-    foreignKey: 'user_id',
+    foreignKey: 'interest_id',
   });
 
 // Users should belong to many interests, uses the User Interests table as the through point
@@ -30,6 +30,5 @@ module.exports = {
   Interests,
   Users,
   UserInterests,
-  UserFriends,
 
 };
