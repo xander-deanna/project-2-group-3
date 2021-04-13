@@ -33,8 +33,8 @@ Users.init(
       },
       friends: {
         type: DataTypes.STRING,
-        allowNull: false,
-        defaultValue: " ",
+        allowNull: true,
+        // defaultValue: " ",
         get: function() {
           return JSON.parse(this.getDataValue('friends'));
         },
