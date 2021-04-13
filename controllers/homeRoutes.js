@@ -5,18 +5,18 @@ const withAuth = require('../utils/auth');
 router.get('/', async (req, res) => {
   try {
     //This find the record for the current user and pull their friends list
-    const friendData = await Users.findOne({
-      where: {
-        post_id: req.session.user_id
-      },
-      include: ['friends'],
-    });
+    // const friendData = await Users.findOne({
+    //   // where: {
+    //   //   post_id: req.session.user_id
+    //   // },
+    //   // include: ['friends'],
+    // });
 
-    const friends = friendData.map((post) => post.get({ plain: true }));
+    // const friends = friendData.map((post) => post.get({ plain: true }));
     // Render Homepage
     res.render('homepage', {
-      ...friends,
-      logged_in: req.session.logged_in
+      // ...friends,
+      // logged_in: req.session.logged_in
     });
   } catch (err) {
     res.status(500).json(err);
