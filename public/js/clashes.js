@@ -16,23 +16,33 @@ const addClash = async (event) => {
         'Content-Type': 'application/json',
       },
     });
-    console.log(friendInfo)
+    //this is going to turn the data into a readable object
+    const friendObj = await friendInfo.json()
+    
+    // const interestArr = [];
+
+    // for( let i=0; i<friendObj.interests.length; i++){
+    //  interestArr = interests.push(friendObj.interests.interest_name[i])
+    // }
+
+    //This is going to repack the interest data into the object
     const friend = {
         id: friendID,
         name: friendName,
-        interests: friendInfo.interests
+        interests: interestArr
     }
+    console.log(friend)
     //This is going to put the user info into the friends section of the current user
-      const response = await fetch('/api/users/1', {
+      const response = await fetch('/api/users/2', {
         method: 'PUT',
-        body: JSON.stringify( friend ),
+        body: JSON.stringify( { friend } ),
         headers: { 'Content-Type': 'application/json' },
       });
   
       if (response.ok) {
         document.location.replace('/');
       } else {
-        alert('Failed to log in.');
+        alert('Friend was not added');
       }
     
   };

@@ -25,9 +25,11 @@ router.post('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+//This route is going to push friend data to the front end javascript for Clashes
 router.get('/:id', async (req, res) => {
   try {
-    //collects the friend data
+    //collects the friend data by their ID
     const userData = await Users.findByPk(req.params.id, {
       include: [
         {
@@ -35,20 +37,22 @@ router.get('/:id', async (req, res) => {
           through: UserInterests
         }
       ]
-      })
- 
+    })
 
-if (!userData[0]) {
-  res.status(404).json({ message: 'No information was sent, try again' });
-  return;
-}
-res.status(200).json(userData);
-} catch (err) {
-  res.status(500).json(err);
-}
-  });
+    if (!userData) {
+      res.status(404).json({ message: 'No information was sent, try again' });
+      return;
+    }
+    res.status(200).json(userData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+//This is going to update the friend data for a user
 router.put('/:id', async (req, res) => {
   try {
+
     //collects the friend data
     const userData = await Users.update({
       friends: req.body.friend,
@@ -58,7 +62,7 @@ router.put('/:id', async (req, res) => {
       },
     });
 
-    if (!userData[0]) {
+    if (!userData) {
       res.status(404).json({ message: 'No information was sent, try again' });
       return;
     }
