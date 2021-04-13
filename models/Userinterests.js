@@ -5,6 +5,7 @@ const sequelize = require('../config/connection');
 class UserInterests extends Model {}
 
 
+
 // This model will host the foreign keys for the belongs to many association in the index.
 UserInterests.init(
   {
