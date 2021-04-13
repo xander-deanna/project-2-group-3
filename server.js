@@ -14,6 +14,15 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+// Script to activate and link Cloudinary to cloudinary server files
+const cloudinary = require('cloudinary').v2
+
+cloudinary.config({ 
+  cloud_name: 'superman123', 
+  api_key: '578184698914981', 
+  api_secret: 'dmxZDvNfTwoH5GxYth4zrHfGloM' 
+});
+
 //Will integrate handlebars helpers
 const hbs = exphbs.create({ helpers });
 
