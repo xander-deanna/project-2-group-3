@@ -1,13 +1,7 @@
-<br>
-<br>
-{{!-- {{#each user.friends as |friends|}}
-{{>friend-details}}
-{{/each}} --}}
-
 <div class="container">
     <div class="card text-center">
         <div class="card-header friend-name">
-            {Friend Name}
+            {{first_name}} {{last_name}}
         </div>
         <div class="container">
             <div class="row">
@@ -17,19 +11,17 @@
                 <div class="col-sm">
                     <div class="card-body">
                         <ul class="friend-interests">
-                            <li>{Friend-Interest}</li>
-                            <li>{Friend-Interest}</li>
-                            <li>{Friend-Interest}</li>
-                            <li>{Friend-Interest}</li>
-                            <li>{Friend-Interest}</li>
+                            {{#each interests as |interest|}}
+                            <li>{{interest_name}}</li>
+                            {{/each}}
                         </ul>
                     </div>
                 </div>
                 <div class="col-sm">
                     <br>
-                    <a href="#" class="btn btn-primary add-friend">Add Friend <i class="fas fa-user-plus"></i></a>
+                    <button class="btn btn-primary add-friend" data-name="{{first_name}} {{last_name}}" data-id="{{id}}" data-interest={{interests}}>Add Friend <i class="fas fa-user-plus"></i></button>
                     <br>
-                    <p class="friend-id">{user-id} (will be hidden)</p>
+                    <p class="friend-id">{{id}} (will be hidden)</p>
                 </div>
             </div>
         </div>
