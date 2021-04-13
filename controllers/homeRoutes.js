@@ -1,22 +1,43 @@
 const router = require('express').Router();
-const { Interests, Users } = require('../models');
+const { Interests, Users, UserInterests } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
     //This find the record for the current user and pull their friends list
-    // const friendData = await Users.findOne({
-    //   // where: {
-    //   //   post_id: req.session.user_id
-    //   // },
-    //   // include: ['friends'],
+    // const userData = await Users.findOne({
+    //   where: [
+    //     {id: req.session.user_id}
+    //   ],
     // });
 
-    // const friends = friendData.map((post) => post.get({ plain: true }));
+    // const user = userData.map((data) => data.get({ plain: true }));
     // Render Homepage
     res.render('homepage', {
-      // ...friends,
+      // user,
       // logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+router.get('/clashes', async (req, res) => {
+  try {
+    //This find the record for the current user and pull their friends list
+    const clashData = await Users.findAll({
+      include: [
+        {
+          model: Interests,
+          through: UserInterests
+        }
+      ]
+    });
+
+    const clashes = clashData.map((clash) => clash.get({ plain: true }));
+    // Render Homepage
+    res.render('clashes', {
+      clashes,
+      logged_in: req.session.logged_in
     });
   } catch (err) {
     res.status(500).json(err);
@@ -29,7 +50,10 @@ router.get('/profile', withAuth, async (req, res) => {
     // Find the logged in user based on the session ID
     const userData = await Users.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Interests }],
+      include: [{   
+        model: Interests,
+        through: UserInterests
+      }],
     });
 
     const user = userData.get({ plain: true });
@@ -41,7 +65,8 @@ router.get('/profile', withAuth, async (req, res) => {
     const interests = interestData.map((interest) => interest.get({ plain: true }));
 
     res.render('profile', {
-      ...user, interests,
+      ...user, 
+      interests,
       logged_in: true
     });
   } catch (err) {
@@ -52,7 +77,7 @@ router.get('/profile', withAuth, async (req, res) => {
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
-    res.redirect('/profile');
+    res.redirect('/login');
     return;
   }
 

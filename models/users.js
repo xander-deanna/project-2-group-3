@@ -33,7 +33,13 @@ Users.init(
       },
       friends: {
         type: DataTypes.STRING,
-        allowNull: false
+        get: function() {
+          return JSON.parse(this.getDataValue('friends'))
+        },
+        set: function(val) {
+          return this.setDataValue('friends', JSON.stringify(val))
+        },
+        allowNull: true
       },
       password: {
         type: DataTypes.STRING,
