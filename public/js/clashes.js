@@ -29,7 +29,7 @@ const addClash = async (event) => {
     const friend = {
         id: friendID,
         name: friendName,
-        interests: interestArr
+        // interests: interestArr
     }
     console.log(friend)
     //This is going to put the user info into the friends section of the current user
