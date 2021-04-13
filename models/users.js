@@ -29,6 +29,10 @@ Users.init(
         type: DataTypes.STRING,
         allowNull: false
       },
+      friends: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
       password: {
         type: DataTypes.STRING,
         allowNull: false,
