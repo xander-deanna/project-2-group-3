@@ -1,27 +1,31 @@
-<h2 class="home-header">Schedule time with your friends</h2>
-
-{{!-- {{#each users as |users|}}
-{{> friend-details}}
-{{/each}} --}}
-
-<div id="wrapper">
-    <form id="form1">
-        <label for="title">Meeting title:</label><br>
-        <input type="text" id="title" name="title" placeholder="Meeting Title"><br>
-        <label for="date">Date:</label><br>
-        <input type="text" id="date" name="date" placeholder="YYYY-MM-DD"><br>
-        <label for="start">Start Time (In Military Time):</label><br>
-        <input type="text" id="start" name="start" placeholder="HH:MM:SS in Miliary Time"><br>
-        <label for="end">End Time (In Military Time):</label><br>
-        <input type="text" id="end" name="end" placeholder="HH:MM:SS in Miliary Time"><br>
-        <label for="description">Description:</label><br>
-        <input type="text" id="description" name="description" placeholder="Description"><br>
-        <label for="place">Location:</label><br>
-        <input type="text" id="place" name="place" placeholder="place"><br>
-        <label for="guests">Email addresses of your Frienemy:</label><br>
-        <input type="text" id="guests" name="guests" placeholder="email@domain.com"><br>
-        <br>
-        <input type="submit" form="form1" id="submitButton" value="Create Google Calendar Event"></input>
-    </form>
-
-    <script src="./js/homepage.js"></script>
+<div class="container">
+    <div class="card text-center">
+        <div class="card-header friend-name">
+            {Friend Name}
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <img class="user-image" src="https://media.giphy.com/media/ZO8upuwNKfpm0/giphy.gif">
+                </div>
+                <div class="col-sm">
+                    <div class="card-body">
+                        <ul class="friend-interests">
+                            <li>{Friend-Interest}</li>
+                            <li>{Friend-Interest}</li>
+                            <li>{Friend-Interest}</li>
+                            <li>{Friend-Interest}</li>
+                            <li>{Friend-Interest}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm">
+                <br>
+                <a href="#" class="btn btn-primary add-friend">Add Friend <i class="fas fa-user-plus"></i></a>
+                <br>
+                <p class="friend-id">{user-id} (will be hidden)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
