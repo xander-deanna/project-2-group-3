@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { Users } = require('../../models');
 
 
 
@@ -7,7 +7,7 @@ const { User } = require('../../models');
 router.post('/', async (req, res) => {
     try {
         //collects the user data
-      const userData = await User.create({
+      const userData = await Users.create({
         first_name: req.body.firstName,
         last_name: req.body.lastName,
         email: req.body.email,
@@ -26,10 +26,32 @@ router.post('/', async (req, res) => {
     }
   });
 
+  router.put('/:id', async (req, res) => {
+    try {
+        //collects the friend data
+      const userData = await Users.update({
+        friend: req.body.friend,
+      }, {
+        where: {
+          id: req.params.id,
+        },
+      });
+  
+      if (!postData[0]) {
+        res.status(404).json({ message: 'No information was sent, try again' });
+        return;
+      }
+      res.status(200).json(userData);
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
+
+
 router.post('/login', async (req, res) => {
     try {
       // Find the user who matches email address
-      const userData = await User.findOne({ where: { email: req.body.email } });
+      const userData = await Users.findOne({ where: { email: req.body.email } });
   
       if (!userData) {
         res
