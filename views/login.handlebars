@@ -1,6 +1,7 @@
-    <br>
-    <br>
-    <br>
+<br>
+<br>
+<br>
+
     <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
     Sign Up
@@ -12,7 +13,7 @@
     <div class="modal-dialog signin_dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <img src="images/frienemies.png" alt="">
+          {{!-- <img src="images/frienemies.png" alt=""> --}}
           <p>Registering to this website, you accept our terms of use and our<a href="#"> privacy policy</a> </p>
         </div>
         <div class="modal-body signin_modal">
@@ -26,39 +27,39 @@
                  aria-controls="profile" aria-selected="false">Sign In</button>
             </li>
           </ul>
-          <div class="social_login">
-              <p>With your social network</p>
-              <ul class="social_log">
-                  <li><img src="images/facebook_logo.svg" alt=""></li>
-                  <li><img src="images/google_plus.png" alt=""></li>
-                  <li><img src="images/twitter_logo.png" alt=""></li>
-              </ul>
-              <p>or</p>
           </div>
               <div class="tab-content signup_tab" id="myTabContent">
                 <div class="tab-pane fade show active" id="signup" role="tabpanel" aria-labelledby="home-tab">
                   <form>
                   <div class="form-group">
-                    <input type="text" class="form-control" id="exampleInputText1" aria-describedby="textHelp" placeholder="Username">
+                    <input type="text" class="form-control" id="First_name" aria-describedby="textHelp" placeholder="First Name">
                   </div>
-                    <div class="form-group">
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
-                  </div>
+                  <br>
                   <div class="form-group">
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <input type="text" class="form-control" id="Last_name" aria-describedby="textHelp" placeholder="Last Name">
                   </div>
+                  <br>
+                    <div class="form-group">
+                    <input type="email" class="form-control" id="signupEmail" aria-describedby="emailHelp" placeholder="Email">
+                  </div>
+                  <br>
+                  <div class="form-group">
+                    <input type="password" class="form-control" id="signupPassword" placeholder="Password">
+                  </div>
+                  <br>
                   <button type="submit" class="btn btn-primary btn-block">Create An Account</button>
                   <p class="signin_link" >Already Made a Frienemy? <a id="profile-tab" data-toggle="tab" href= "#signin" role="tab" 
                     aria-controls="profile" aria-selected="false">Sign In</a></p>
                 </form>
               </div>
-              <div class="tab-pane fade" id="signin" role="tabpanel" aria-labelledby="profile-tab">
+              <div class="tab-pane fade" id="login-form" role="tabpanel" aria-labelledby="profile-tab">
                 <form>
                   <div class="form-group">
-                    <input type="text" class="form-control" id="exampleInputText1" aria-describedby="textHelp" placeholder="Username">
+                    <input type="email" class="form-control" id="loginEmail" aria-describedby="emailHelp" placeholder="Email">
                   </div>
-                  <div class="">
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                  <br>
+                  <div class="form-group">
+                    <input type="password" class="form-control" id="loginPassword" placeholder="Password">
                   </div>
                   <p class="forgot_link"><a href="#">Forgot your Password ?</a></p>
                   <button type="submit" class="btn btn-primary btn-block">Login</button>
