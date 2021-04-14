@@ -1,13 +1,14 @@
 <br>
-<br>
+{{#if user.friends}}
 {{#each user.friends as |friends|}}
 {{>friend-details}}
 {{/each}}
+{{else}}
 
 <div class="container">
     <div class="card text-center">
         <div class="card-header friend-name">
-            {Friend Name}
+            You do not have friend yet, go to clashes if you would like to add some
         </div>
         <div class="container">
             <div class="row">
@@ -35,3 +36,4 @@
         </div>
     </div>
 </div>
+{{/if}}

@@ -1,3 +1,6 @@
+{{!-- Going to remove the current users information since they cant friend themself --}}
+{{#if (check_id session_id id)}}
+{{else}}
 <div class="container">
     <div class="card text-center">
         <div class="card-header friend-name">
@@ -27,3 +30,4 @@
         </div>
     </div>
 </div>
+{{/if}}
