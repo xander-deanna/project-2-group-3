@@ -3,19 +3,20 @@ const { Interests, Users, UserInterests } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
+  console.log (req.session.user_id)
   try {
-    //This find the record for the current user and pull their friends list
-    // const userData = await Users.findOne({
-    //   where: [
-    //     {id: req.session.user_id}
-    //   ],
-    // });
+    
+    // This finds the record for the current user and pull their friends list
+    const userData = await Users.findByPk(3, {
+      attributes: { exclude: ['password'] },
+   
+    });
 
-    // const user = userData.map((data) => data.get({ plain: true }));
+    const user = userData.get({ plain: true });
     // Render Homepage
     res.render('homepage', {
-      // user,
-      // logged_in: req.session.logged_in
+      user,
+      logged_in: req.session.logged_in
     });
   } catch (err) {
     res.status(500).json(err);
@@ -77,7 +78,7 @@ router.get('/profile', withAuth, async (req, res) => {
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
-    res.redirect('/login');
+    res.redirect('/');
     return;
   }
 
