@@ -34,7 +34,7 @@ Users.init(
       friends: {
         type: DataTypes.STRING,
         allowNull: true,
-        // defaultValue: " ",
+        defaultValue: null,
         get: function() {
           return JSON.parse(this.getDataValue('friends'));
         },
