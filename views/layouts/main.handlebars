@@ -1,73 +1,80 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Frienemies</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <!-- bootstrap cdn -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<head>
+    <title>Frienemies</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <!-- font awesome cdn -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" rel="stylesheet">
+    <!-- bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-        <!-- favicons (will work on later or delete)-->
-        <!-- <link rel="icon" type="image/png" sizes="32x32" href="#"> -->
-        <!-- <link rel="icon" type="image/png" sizes="16x16" href="#"> -->
-        
-        <!-- Josefin Sans google font for logo -->
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=New+Tegomin&display=swap" rel="stylesheet">
+    <!-- font awesome cdn -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" rel="stylesheet">
 
-        <!-- custom stylesheet (overwrites bootstrap in the cascade) -->
-        <link  rel="stylesheet" href="/css/style.css">
-        <link  rel="stylesheet" href="/css/loginstyle.css">
-    </head>
+    <!-- favicons (will work on later or delete)-->
+    <!-- <link rel="icon" type="image/png" sizes="32x32" href="#"> -->
+    <!-- <link rel="icon" type="image/png" sizes="16x16" href="#"> -->
 
-    <body>
+    <!-- Josefin Sans google font for logo -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=New+Tegomin&display=swap" rel="stylesheet">
+
+    <!-- custom stylesheet (overwrites bootstrap in the cascade) -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/loginstyle.css">
+</head>
+
+<body>
     <!-- navbar -->
-        <header>
-            <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-                <div class="container-fluid">
-                    <!--nav bar title/name-->
-                    <a class="navbar-brand" href="https://xander-deanna.github.io/project-2-group-3/">Frienemies <i class="fas fa-grin-squint"></i></a>
-                    <!--nav button (for when collapsed)-->
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <div class="container-fluid">
+                <!--nav bar title/name-->
+                <a class="navbar-brand" href="https://xander-deanna.github.io/project-2-group-3/">Frienemies <i
+                        class="fas fa-grin-squint"></i></a>
+                <!--nav button (for when collapsed)-->
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
-                    </button>
+                </button>
 
-                    <!-- navbar items-->
-                    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto mb-2 mb-md-0">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fas fa-home"></i> Home </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fas fa-user"></i> Profile </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fas fa-exclamation"></i> Clashes </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fas fa-users"></i> Friends </a>
-                            </li>
-                             <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fas fa-sign-in-alt"></i> Login </a>
-                            </li>
-                        </ul>
-                    </div>
+                <!-- navbar items-->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/homepage"><i class="fas fa-home"></i> Home </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/profile"><i class="fas fa-user"></i> Profile </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/clashes"><i class="fas fa-exclamation"></i> Clashes </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/"><i class="fas fa-users"></i> Friends </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login"><i class="fas fa-sign-in-alt"></i> Login </a>
+                        </li>
+                    </ul>
                 </div>
-            </nav>
-        </header>
-        {{!-- PARTIALS HERE --}}
+            </div>
+        </nav>
+    </header>
+    {{!-- PARTIALS HERE --}}
 
-        {{{ body }}}
+    {{{ body }}}
 
-        {{!-- END PARTIALS --}}
+    {{!-- END PARTIALS --}}
 
-        <footer></footer>
+    <footer></footer>
 
-    </body>
+</body>
+
 </html>
