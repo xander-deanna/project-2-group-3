@@ -1,34 +1,40 @@
 <br>
 <br>
 <br>
-
+{{#if logged_in}}
+<button class="btn btn-primary" type="submit" id="logout">Logout</button>
+{{else}}
+{{/if}}
 {{!-- main page content --}}
 <div class="row">
   <div class="col-8 add-padding-left">
-      <h2>Welcome to</h2>
-      <p class="logo">Frienemies</p>
+    <h2>Welcome to</h2>
+    <p class="logo">Frienemies</p>
     <p class="jumbotron-font-2">Connect with interesting people and gain new hobbies!</p>
   </div>
   <div class="col-4 add-padding-right">
     {{!-- button to trigger modal --}}
     <button type="button" class="btn btn-primary signup-btn" data-toggle="modal" data-target="#loginModal">
-    Create Account <i class="fas fa-grin-squint"></i>
+      Create Account <i class="fas fa-grin-squint"></i>
     </button>
   </div>
 </div>
 
 {{!-- modal --}}
-<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true" id="loginModal">
+<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true"
+  id="loginModal">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
         {{!-- signin / signup tabs --}}
         <ul class="nav nav-tabs" id="myTab" role="tablist">
           <li class="nav-item">
-            <button class="nav-link active" id="home-tab" data-toggle="tab" href= "#signup"  role="tab" aria-controls="home" aria-selected="true">Sign Up</button>
+            <button class="nav-link active" id="home-tab" data-toggle="tab" href="#signup" role="tab"
+              aria-controls="home" aria-selected="true">Sign Up</button>
           </li>
           <li class="nav-item">
-            <button class="nav-link" id="profile-tab" data-toggle="tab" href= "#signin" role="tab" aria-controls="profile" aria-selected="false">Sign In</button>
+            <button class="nav-link" id="profile-tab" data-toggle="tab" href="#signin" role="tab"
+              aria-controls="profile" aria-selected="false">Sign In</button>
           </li>
         </ul>
         {{!-- close button --}}
@@ -37,28 +43,32 @@
         </button>
       </div>
       <div class="modal-body">
-      {{!-- modal body here --}}
+        {{!-- modal body here --}}
         {{!-- sign up tab for modal --}}
         <div class="tab-content signup_tab" id="myTabContent">
           <div class="tab-pane fade show active" id="signup" role="tabpanel" aria-labelledby="home-tab">
-            <form>
+            <form class="signup-form">
               <div class="form-group">
-                <input type="text" class="form-control" id="First_name" aria-describedby="textHelp" placeholder="First Name">
-              </div>
-                <br>
-              <div class="form-group">
-                  <input type="text" class="form-control" id="Last_name" aria-describedby="textHelp" placeholder="Last Name">
+                <input type="text" class="form-control" id="First_name" aria-describedby="textHelp"
+                  placeholder="First Name">
               </div>
               <br>
               <div class="form-group">
-                <input type="email" class="form-control" id="signupEmail" aria-describedby="emailHelp" placeholder="Email">
+                <input type="text" class="form-control" id="Last_name" aria-describedby="textHelp"
+                  placeholder="Last Name">
+              </div>
+              <br>
+              <div class="form-group">
+                <input type="email" class="form-control" id="signupEmail" aria-describedby="emailHelp"
+                  placeholder="Email">
               </div>
               <br>
               <div class="form-group">
                 <input type="password" class="form-control" id="signupPassword" placeholder="Password">
               </div>
               <br>
-              <p class="signin_link"> Already Made a Frienemy? <a id="profile-tab" data-toggle="tab" href= "#signin" role="tab" aria-controls="profile" aria-selected="false">Sign In</a></p>
+              <p class="signin_link"> Already Made a Frienemy? <a id="profile-tab" data-toggle="tab" href="#signin"
+                  role="tab" aria-controls="profile" aria-selected="false">Sign In</a></p>
               <div class="modal-footer">
                 <button type="submit" class="btn btn-primary btn-block" id="signup-btn">Create Account</button>
                 <br>
@@ -68,16 +78,18 @@
           </div>
           {{!-- sign in tab for modal --}}
           <div class="tab-pane fade" id="signin" role="tabpanel" aria-labelledby="profile-tab">
-            <form>
+            <form class="login-form">
               <div class="form-group">
-                <input type="email" class="form-control" id="loginEmail" aria-describedby="emailHelp" placeholder="Email">
+                <input type="email" class="form-control" id="loginEmail" aria-describedby="emailHelp"
+                  placeholder="Email">
               </div>
               <br>
               <div class="form-group">
                 <input type="password" class="form-control" id="loginPassword" placeholder="Password">
               </div>
               <br>
-              <p class="signin_link"> Dont have a Frienemy? <a id="home-tab" data-toggle="tab" href= "#signup" role="tab" aria-controls="home" aria-selected="false">Sign Up</a></p>
+              <p class="signin_link"> Dont have a Frienemy? <a id="home-tab" data-toggle="tab" href="#signup" role="tab"
+                  aria-controls="home" aria-selected="false">Sign Up</a></p>
               <div class="modal-footer">
                 <button type="submit" class="btn btn-primary btn-block" id="signin-btn">Sign In</button>
                 <br>
@@ -90,3 +102,6 @@
     </div>
   </div>
 </div>
+
+<script src="./js/login.js"></script>
+
