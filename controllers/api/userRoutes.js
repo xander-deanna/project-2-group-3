@@ -51,12 +51,12 @@ router.get('/:id', async (req, res) => {
 });
 
 //This is going to update the friend data for a user
-router.put('/:id', async (req, res) => {
+router.put('/addfriend/:id', async (req, res) => {
   try {
 
     //collects the friend data
     const userData = await Users.update({
-      friends: req.body.friend,
+      friends: req.body.friendsArr,
     }, {
       where: {
         id: req.params.id,

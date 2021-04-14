@@ -62,3 +62,20 @@ ul {
   border-radius: 60px;
   margin: 20px;
 }
+
+/* ------------------- PROFILE PAGE ------------------- */
+
+/* resizes profile image */
+.user-image-large {  
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+  margin: 20px;
+}
+
+/* adds spacing between the interest buttons */
+.interest-btn {
+  margin: 5px;
+  align-items: center;
+  justify-content: center;
+}
