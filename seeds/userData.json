@@ -1,8 +1,8 @@
 [
     {
-        "first_name": "Tom",
-        "last_name": "Anderson",
-        "email": "tom@myspace.com",
+        "first_name": "Robert",
+        "last_name": "Downey Jr",
+        "email": "tony@stark.com",
         "password": "password"
     },
     {
@@ -12,9 +12,19 @@
         "password": "password"
     },
     {
-        "first_name": "Robert",
-        "last_name": "Downey Jr",
-        "email": "tony@stark.com",
-        "password": "password"
+        "first_name": "Tom",
+        "last_name": "Anderson",
+        "email": "tom@myspace.com",
+        "password": "password",
+        "friends": [
+            {
+                "id": "1",
+                "name": "Robert Downey Jr"
+            },
+            {
+                "id": "2",
+                "name": "Dwayne Anderson"
+            }
+        ]
     }
 ]

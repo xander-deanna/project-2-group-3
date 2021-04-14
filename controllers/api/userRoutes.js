@@ -12,6 +12,7 @@ router.post('/', async (req, res) => {
       last_name: req.body.lastName,
       email: req.body.email,
       password: req.body.password,
+      image_path: req.body.image_path,
     });
 
     //sets up the session
@@ -50,12 +51,12 @@ router.get('/:id', async (req, res) => {
 });
 
 //This is going to update the friend data for a user
-router.put('/:id', async (req, res) => {
+router.put('/addfriend/:id', async (req, res) => {
   try {
 
     //collects the friend data
     const userData = await Users.update({
-      friends: req.body.friend,
+      friends: req.body.friendsArr,
     }, {
       where: {
         id: req.params.id,
@@ -72,8 +73,27 @@ router.put('/:id', async (req, res) => {
   }
 });
 
- router.post('/login', withAuth, async (req, res) => {
-// router.post('/api/users/login', async (req, res) => {
+//This is going to update the image_path data for the user
+router.put('/profileid', async (req, res) => {
+  try {
+    const userImagePath = await Users.update({
+      image_path: req.body.image_path,
+    }, {
+      where: {
+        image_path: req.params.id,
+      }
+    });
+    if (!userData) {
+      res.status(404).json({ message: 'No image was updated, try again' });
+      return;
+    }
+    res.status(200).json(userImagePath);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+})
+
+router.post('/login', async (req, res) => {
   try {
     // Find the user who matches email address
     const userData = await Users.findOne({ where: { email: req.body.email } });
