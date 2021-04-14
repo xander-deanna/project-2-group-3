@@ -45,9 +45,24 @@
     }, (error, result) => {
       if (result.event == "success") {
         console.log(result.info) // result.info contains data from upload
+        const newImagePath = "http://res.cloudinary.com/superman123/image/upload/" + result.info.path;
+        console.log(newImagePath);
+        const response = fetch('/api/users/profileid', {
+          method: 'PUT',
+          body: JSON.stringify({ newImagePath }),
+          headers: { 'Content-Type': 'application/json' },
+        });
+
+        if (response.ok) {
+          document.location.replace('/');
+        } else {
+          alert('Image was not updated');
+        }
       }
     })
+
     document.getElementById("upload_widget").addEventListener("click", function () {
       myWidget.open();
     }, false);
-</script>
+
+  </script>
