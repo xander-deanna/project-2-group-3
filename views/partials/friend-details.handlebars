@@ -1,20 +1,28 @@
-<div class="row">
-    <div class="col-md-1"></div>
-    <div class="col-md-10">
-        <div class="card">
-            <div class="col-md-3">
-                <img class="user-image" src="https://media.giphy.com/media/ZO8upuwNKfpm0/giphy.gif" alt="Picture of {{first_name}}" style="float: left;" />
+
+<div class="container">
+    <div class="card text-center">
+        <div class="card-header friend-name">
+            {{name}} 
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <img class="user-image" src="https://media.giphy.com/media/ZO8upuwNKfpm0/giphy.gif">
+                </div>
+                <div class="col-sm">
+                    <div class="card-body">
+                        <ul class="friend-interests">
+                          
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <br>
+                    <button class="btn btn-primary add-friend" data-name="{{name}}"
+                        data-id="{{id}}">View Profile<i class="fas fa-user-plus"></i></button>
+                    <br>
+                </div>
             </div>
-            <div class="col-md-6">
-                <h5 class="card-title border-bottom border-4">{{name}}</h5>
-                <h6 class="card-subtitle">Interests</h4>
-                    <ul class="user-interests">
-                        {{!-- Filler for the User Interest --}}
-                      
-                    </ul>
-            </div>
-            <div class="col-md-3"><i class="fas fa-calendar-plus"></i></div>
         </div>
     </div>
-    <div class="col-md-1"></div>
 </div>
