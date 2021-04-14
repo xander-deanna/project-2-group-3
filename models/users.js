@@ -50,6 +50,11 @@ Users.init(
           max: 16
         },
       },
+      image_path: {
+        type: DataTypes.STRING,
+        allowNull: true,
+        defaultValue: 'https://res.cloudinary.com/superman123/image/upload/v1618368182/i1gt92sjus4ziltbpkvc.png',
+      },
     },
     {
       hooks: {
