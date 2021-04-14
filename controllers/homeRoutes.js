@@ -3,7 +3,7 @@ const { Interests, Users, UserInterests } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
-  console.log (req.session.user_id)
+  console.log (req.session.user_id);
   try {
     
     // This finds the record for the current user and pull their friends list
