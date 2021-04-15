@@ -2,22 +2,22 @@
 // Code for processing logins
 const loginFormHandler = async (event) => {
   event.preventDefault();
-  console.log("You're in!")
+  console.log("loginFormHandler() : init");
 
   const email = document.querySelector('#loginEmail').value.trim();
   const password = document.querySelector('#loginPassword').value.trim();
-
+  console.log(JSON.stringify({ email, password }));
   if (email && password) {
     const response = await fetch('/api/users/login', {
-      method: 'POST',
+      method: 'post',
       body: JSON.stringify({ email, password }),
       headers: { 'Content-Type': 'application/json' },
-    });
+    })
 
     if (response.ok) {
       document.location.replace('/');
     } else {
-      alert('Failed to log in.');
+      alert('Failed to sign up.');
     }
   }
 };

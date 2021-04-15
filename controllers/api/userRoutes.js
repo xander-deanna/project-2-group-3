@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { Users, Interests, UserInterests } = require('../../models');
-
+const withAuth = require('../../utils/auth');
 
 
 // CREATE new user

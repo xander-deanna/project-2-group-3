@@ -1,39 +1,19 @@
-<br>
 {{#if user.friends}}
 {{#each user.friends as |friends|}}
 {{>friend-details}}
 {{/each}}
 {{else}}
 
+<br>
 <div class="container">
     <div class="card text-center">
         <div class="card-header friend-name">
-            You do not have friend yet, go to clashes if you would like to add some
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm">
-                    <img class="user-image" src="https://media.giphy.com/media/ZO8upuwNKfpm0/giphy.gif">
-                </div>
-                <div class="col-sm">
-                    <div class="card-body">
-                        <ul class="friend-interests">
-                            <li>{Friend-Interest}</li>
-                            <li>{Friend-Interest}</li>
-                            <li>{Friend-Interest}</li>
-                            <li>{Friend-Interest}</li>
-                            <li>{Friend-Interest}</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm">
-                    <br>
-                    <a href="#" class="btn btn-primary add-friend">Add Friend <i class="fas fa-user-plus"></i></a>
-                    <br>
-                    <p class="friend-id">{user-id} (will be hidden)</p>
-                </div>
-            </div>
+            You don't have any friends yet. <i class="far fa-frown"></i>
+            <br>
+            <br>
+            Please go to the clashes page if you would like to add some.
         </div>
     </div>
 </div>
 {{/if}}
+<script src="./js/homepage.js"></script>
