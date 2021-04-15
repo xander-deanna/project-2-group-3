@@ -1,7 +1,8 @@
 {{!-- Going to remove the current users information since they cant friend themself --}}
-{{#if (check_id session_id id)}}
+{{!-- {{#if (check_id session_id id)}}
+{{else}} --}}
+{{#if (check_multi id_check id)}}
 {{else}}
-
 <br>
 <div class="container">
     <div class="card text-center">
@@ -34,3 +35,4 @@
     </div>
 </div>
 {{/if}}
+{{!-- {{/if}} --}}
