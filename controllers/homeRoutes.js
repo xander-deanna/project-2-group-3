@@ -50,6 +50,31 @@ router.get('/clashes', withAuth, async (req, res) => {
   }
 });
 
+
+// Use withAuth middleware to prevent access to route
+router.get('/profile/:id', withAuth, async (req, res) => {
+  try {
+    // Find the logged in user based on the session ID
+    const userData = await Users.findByPk(req.params.id, {
+      attributes: { exclude: ['password'] },
+      include: [{
+        model: Interests,
+        through: UserInterests
+      }],
+    });
+
+    const user = userData.get({ plain: true });
+    
+
+    res.render('friendprofile', {
+      ...user,
+      logged_in: true
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 // Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {
   try {

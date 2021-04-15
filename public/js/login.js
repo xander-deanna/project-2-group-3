@@ -14,22 +14,11 @@ const loginFormHandler = async (event) => {
       headers: { 'Content-Type': 'application/json' },
     })
 
-    // if (response.ok) {
-    //   document.location.replace('');
-    // } else {
-    //   alert('Failed to log in.');
-    // }
-
-    .then(response => {
-      if(response.ok){
-        let data = response.clone().json()
-        console.log(data);
-      }
-    });
-    
-    // .catch(function(err) {
-    //   console.log('Fetch Error :-S', err);
-    // });
+    if (response.ok) {
+      document.location.replace('/');
+    } else {
+      alert('Failed to sign up.');
+    }
   }
 };
 
