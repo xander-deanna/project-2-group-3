@@ -3,13 +3,15 @@
         "first_name": "Robert",
         "last_name": "Downey Jr",
         "email": "tony@stark.com",
-        "password": "password"
+        "password": "password",
+        "image_path": "http://res.cloudinary.com/superman123/image/upload/v1618590895/wirluzvlgxjowrwgin5p.jpg"
     },
     {
         "first_name": "Dwayne",
-        "last_name": "Anderson",
+        "last_name": "Johnson",
         "email": "dwayne@therock.com",
-        "password": "password"
+        "password": "password",
+        "image_path": "http://res.cloudinary.com/superman123/image/upload/v1618590714/hehocspq6g4zgcupcvac.jpg"
     },
     {
         "first_name": "Tom",
@@ -25,6 +27,7 @@
                 "id": "2",
                 "name": "Dwayne Anderson"
             }
-        ]
+        ],
+        "image_path": "http://res.cloudinary.com/superman123/image/upload/v1618590086/r7qmbdssloendjrg4yzl.jpg"
     }
 ]
