@@ -53,7 +53,7 @@ Users.init(
       image_path: {
         type: DataTypes.STRING,
         allowNull: true,
-        defaultValue: '"https://media.giphy.com/media/ZO8upuwNKfpm0/giphy.gif"',
+        defaultValue: 'https://media.giphy.com/media/ZO8upuwNKfpm0/giphy.gif',
       },
     },
     {
