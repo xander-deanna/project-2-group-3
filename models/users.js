@@ -53,6 +53,7 @@ Users.init(
       image_path: {
         type: DataTypes.STRING,
         allowNull: true,
+        defaultValue: null,
       },
     },
     {
