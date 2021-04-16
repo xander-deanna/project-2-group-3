@@ -33,7 +33,7 @@ Users.init(
       },
       friends: {
         type: DataTypes.TEXT('medium'),
-        allowNull: true,
+        notNull: false,
         defaultValue: null,
         get: function() {
           return JSON.parse(this.getDataValue('friends'));
