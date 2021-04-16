@@ -43,14 +43,19 @@ router.get('/clashes', withAuth, async (req, res) => {
     const user = userData.get({ plain: true });
     
     const idArr =[req.session.user_id];
+    if(!user.friends){
 
+    }
+    else{
     for( let i=0; i<user.friends.length; i++){
       idArr.push(parseInt(user.friends[i].id))
      };
-    //  console.log(idArr)
+    }
+    
+  
 
     const authClashes = clashes.map((clash) => {
-      return { ...clash, id_check: idArr}
+      return { ...clash, session_id: req.session.user_id, id_check: idArr}
     });
     // console.log(authClashes)
     // Render Homepage

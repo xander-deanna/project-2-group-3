@@ -2,22 +2,26 @@
 <div class="container">
     <div class="card text-center">
         <div class="card-header friend-name">
-            {{name}} 
+            {{name}}
         </div>
         <div class="container">
             <div class="row">
                 <div class="col-sm">
+                    {{#if image_path}}
+                    <img class="user-image" src="{{image_path}}">
+                    {{else}}
                     <img class="user-image" src="https://media.giphy.com/media/ZO8upuwNKfpm0/giphy.gif">
+                    {{/if}}
                 </div>
                 <div class="col-sm">
                     <div class="card-body">
-                       <p>{{interests}}</p>
+                        <p>{{interests}}</p>
                     </div>
                 </div>
                 <div class="col-sm">
                     <br>
-                    <button class="btn btn-primary view-profile" data-name="{{name}}"
-                        data-id="{{id}}">View Profile<i class="fas fa-user-plus"></i></button>
+                    <button class="btn btn-primary view-profile" data-name="{{name}}" data-id="{{id}}">View Profile<i
+                            class="fas fa-user-plus"></i></button>
                     <br>
                 </div>
             </div>
