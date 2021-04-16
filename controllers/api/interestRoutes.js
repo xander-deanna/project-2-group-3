@@ -9,6 +9,21 @@ const { Users, Interests, UserInterests } = require('../../models');
 // })
 // })
 
+router.post('/addNewInterest', async (req,res) => {
+    try {
+      const newInterest = await Interests.create({
+        interest_name: req.body.interest,
+      });
+      if (!newInterest) {
+        res.status(404).json({ message: 'no information was sent, please try again.' });
+        return;
+      }
+      res.status(200).json(newInterest);
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
+
 router.post('/addInterest', async (req,res) => {
   try {
     const newInterest = await UserInterests.create({
