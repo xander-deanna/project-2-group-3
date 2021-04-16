@@ -114,7 +114,7 @@ router.get('/profile', withAuth, async (req, res) => {
 
     res.render('profile', {
       ...user,
-      interests,
+      global_interests: interests,
       logged_in: true,
       userId: req.session.user_id
     });
