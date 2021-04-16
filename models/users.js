@@ -42,6 +42,10 @@ Users.init(
           return this.setDataValue('friends', JSON.stringify(val));
         }
       },
+      image_path: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
       password: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -49,10 +53,6 @@ Users.init(
           min: 8,  
           max: 16
         },
-      },
-      image_path: {
-        type: DataTypes.STRING,
-        allowNull: true,
       },
     },
     {
