@@ -37,9 +37,27 @@ router.get('/clashes', withAuth, async (req, res) => {
 
     const clashes = clashData.map((clash) => clash.get({ plain: true }));
     //This is going to map in session id's to use as a comparison
-    const authClashes = clashes.map((clash) => {
-      return { ...clash, session_id: req.session.user_id }
+    const userData = await Users.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] }
     });
+    const user = userData.get({ plain: true });
+    
+    const idArr =[req.session.user_id];
+    if(!user.friends){
+
+    }
+    else{
+    for( let i=0; i<user.friends.length; i++){
+      idArr.push(parseInt(user.friends[i].id))
+     };
+    }
+    
+  
+
+    const authClashes = clashes.map((clash) => {
+      return { ...clash, session_id: req.session.user_id, id_check: idArr}
+    });
+    // console.log(authClashes)
     // Render Homepage
     res.render('clashes', {
       clashes: authClashes,

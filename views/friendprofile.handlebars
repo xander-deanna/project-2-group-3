@@ -3,8 +3,12 @@
         <h4>{{first_name}} {{last_name}}</h4>
     </div>
     <div class="card-body">
+        {{#if image_path}}
+        <img class="user-image-large justify-content-center" src={{image_path}}> <br>
+        {{else}}
         <img class="user-image-large justify-content-center"
-            src="https://media.giphy.com/media/ZO8upuwNKfpm0/giphy.gif">
+            src="https://media.giphy.com/media/ZO8upuwNKfpm0/giphy.gif"> <br>
+        {{/if}}
         <br>
         <div class="d-grid gap-2 col-3 mx-auto">
             <h5>{{first_name}} {{last_name}}'s Interests:</h5>

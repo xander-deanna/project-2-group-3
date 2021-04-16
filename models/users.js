@@ -32,7 +32,7 @@ Users.init(
         allowNull: false
       },
       friends: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT('long'),
         allowNull: true,
         defaultValue: null,
         get: function() {

@@ -1,5 +1,5 @@
 {{!-- Going to remove the current users information since they cant friend themself --}}
-{{#if (check_id session_id id)}}
+{{#if (check_multi id_check id)}}
 {{else}}
 
 <br>
@@ -11,7 +11,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm">
+                    {{#if image_path}}
+                    <img class="user-image" src="{{image_path}}">
+                    {{else}}
                     <img class="user-image" src="https://media.giphy.com/media/ZO8upuwNKfpm0/giphy.gif">
+                    {{/if}}
                 </div>
                 <div class="col-sm">
                     <div class="card-body">
@@ -25,7 +29,7 @@
                 <div class="col-sm">
                     <br>
                     <button class="btn btn-primary add-friend" data-name="{{first_name}} {{last_name}}"
-                        data-id="{{id}}" data-user ="{{session_id}}">Add Friend <i class="fas fa-user-plus"></i></button>
+                        data-id="{{id}}" data-user ="{{session_id}}" data-img="{{image_path}}">Add Friend <i class="fas fa-user-plus"></i></button>
                     <br>
                     <p class="friend-id">{{id}} (will be hidden)</p>
                 </div>
