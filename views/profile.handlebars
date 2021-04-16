@@ -6,7 +6,8 @@
     {{#if image_path}}
     <img class="user-image-large justify-content-center" src={{image_path}}> <br>
     {{else}}
-    <img class="user-image-large justify-content-center" src="https://media.giphy.com/media/ZO8upuwNKfpm0/giphy.gif"> <br>
+    <img class="user-image-large justify-content-center" src="https://media.giphy.com/media/ZO8upuwNKfpm0/giphy.gif">
+    <br>
     {{/if}}
     <div class="d-grid gap-2 d-md-block">
       {{!-- photo upload button --}}
@@ -61,7 +62,7 @@
         body: JSON.stringify({ newImagePath }),
         headers: { 'Content-Type': 'application/json' },
       });
-
+      location.reload();
     }
   })
 
