@@ -12,6 +12,7 @@ router.post('/', async (req, res) => {
       last_name: req.body.lastName,
       email: req.body.email,
       password: req.body.password,
+      image_path: req.body.image_path,
     });
 
     //sets up the session
