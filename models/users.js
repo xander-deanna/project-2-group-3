@@ -34,7 +34,7 @@ Users.init(
       friends: {
         type: DataTypes.STRING(5000),
         allowNull: true,
-        defaultValue:'[{"id":"2","name":"Tom Anderson","image_path":"http://res.cloudinary.com/superman123/image/upload/v1618590086/r7qmbdssloendjrg4yzl.jpg","interests":["Acting","Camping","Fitness","Scuba Diving"]}]',
+        defaultValue:'[]',
         get: function() {
           return JSON.parse(this.getDataValue('friends'));
         },
