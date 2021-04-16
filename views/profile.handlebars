@@ -14,11 +14,17 @@
       <button class="btn btn-success" id="upload_widget" value="{{userId}}" class="cloudinary-button">Upload a profile
         picture</button>
       {{!-- user interests modal button --}}
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">Add
+      <button type="button" id="modal-btn" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong" value="{{userId}}">Add
         interests</button>
     </div>
   </div>
   <div class="card-footer text-muted">
+    <div class="d-grid gap-2 col-3 mx-auto">
+      <h5>{{first_name}} {{last_name}}'s Interests:</h5>
+      {{#each interests as |interest|}}
+      <button class="btn btn-primary">{{interest_name}}</button>
+      {{/each}}
+    </div>
   </div>
 </div>
 
@@ -35,13 +41,16 @@
       </div>
       <div class="modal-body">
         {{!-- interest buttons --}}
-        {{#each interests as |interests|}}
+        {{#each global_interests as |global_interests|}}
         {{>interest-details}}
         {{/each}}
       </div>
     </div>
   </div>
 </div>
+
+{{!-- homepage.js interests button script --}}
+<script src="./js/profile.js"></script>
 
 {{!-- cloudinary image upload widget script --}}
 <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
