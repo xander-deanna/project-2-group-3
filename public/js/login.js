@@ -2,11 +2,11 @@
 // Code for processing logins
 const loginFormHandler = async (event) => {
   event.preventDefault();
-  console.log("loginFormHandler() : init");
+
 
   const email = document.querySelector('#loginEmail').value.trim();
   const password = document.querySelector('#loginPassword').value.trim();
-  console.log(JSON.stringify({ email, password }));
+  
   if (email && password) {
     const response = await fetch('/api/users/login', {
       method: 'post',
@@ -26,7 +26,7 @@ const loginFormHandler = async (event) => {
 // Code for processing sign ups
 
 const signupFormHandler = async (event) => {
-  console.log("You're reached the signupFormHandler");
+ 
   event.preventDefault();
 
   const firstName = document.querySelector('#First_name').value.trim();

@@ -32,15 +32,19 @@ Users.init(
         allowNull: false
       },
       friends: {
-        type: DataTypes.TEXT('long'),
+        type: DataTypes.STRING(5000),
         allowNull: true,
-        defaultValue: null,
+        defaultValue:'[]',
         get: function() {
           return JSON.parse(this.getDataValue('friends'));
         },
         set: function(val) {
           return this.setDataValue('friends', JSON.stringify(val));
         }
+      },
+      image_path: {
+        type: DataTypes.STRING,
+        allowNull: true,
       },
       password: {
         type: DataTypes.STRING,
@@ -49,10 +53,6 @@ Users.init(
           min: 8,  
           max: 16
         },
-      },
-      image_path: {
-        type: DataTypes.STRING,
-        allowNull: true,
       },
     },
     {

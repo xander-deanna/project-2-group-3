@@ -14,7 +14,8 @@
       <button class="btn btn-success" id="upload_widget" value="{{userId}}" class="cloudinary-button">Upload a profile
         picture</button>
       {{!-- user interests modal button --}}
-      <button type="button" id="modal-btn" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong" value="{{userId}}">Add
+      <button type="button" id="modal-btn" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong"
+        value="{{userId}}">Add
         interests</button>
     </div>
   </div>
@@ -44,6 +45,15 @@
         {{#each global_interests as |global_interests|}}
         {{>interest-details}}
         {{/each}}
+        <form class="interest-form">
+          <div class="form-group">
+            <input type="text" class="form-control" id="new-interest" aria-describedby="textHelp"
+              placeholder="add an interest">
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary btn-block" id="new-interest-btn">Add Interest</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>

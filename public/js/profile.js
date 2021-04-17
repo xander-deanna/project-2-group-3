@@ -23,6 +23,25 @@
 //     modal.style.display = "none";
 //   }
 // }
+const addNewInterests = async (event) => {
+  event.preventDefault();
+
+  const interest = document.querySelector('#new-interest').value.trim();
+
+  const response = await fetch('/api/interests/addNewInterest', {
+    method: 'POST',
+    body: JSON.stringify({ interest }),
+    headers: {'Content-Type': 'application/json'},
+  });
+  if (response.ok) {
+    document.location.reload();
+  }
+};
+document
+  .querySelector('.interest-form')
+  .addEventListener('submit', addNewInterests);
+
+
 
 // query selectors to help add interests when user clicks add interest buttons
 const addInterests = async (event) => {
