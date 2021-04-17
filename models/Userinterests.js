@@ -1,10 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
-
 const sequelize = require('../config/connection');
 
 class UserInterests extends Model {}
-
-
 
 // This model will host the foreign keys for the belongs to many association in the index.
 UserInterests.init(
@@ -25,12 +22,12 @@ UserInterests.init(
       },
     },
     //this is going to reference the pk of interest
-      interest_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'interests',
-          key: 'id',
-        },
+    interest_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'interests',
+        key: 'id',
+      },
     }
   },
   {
