@@ -55,9 +55,15 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/"><i class="fas fa-users"></i> Friends </a>
                         </li>
+                        {{#if logged_in}}
                         <li class="nav-item">
                             <a class="nav-link" href="#" id="logout"><i class="fas fa-sign-in-alt"></i> Logout </a>
                         </li>
+                        {{else}}
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="login" data-toggle="modal" data-target="#loginModal" href="#signin"><i class="fas fa-sign-in-alt"></i> Login </a>
+                        </li>
+                        {{/if}}
                     </ul>
                 </div>
             </div>
