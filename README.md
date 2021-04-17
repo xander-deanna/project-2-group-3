@@ -17,13 +17,13 @@ Frienemies is new type of social network that allows you to connect with new and
 <br>
                 
 ## Requirements
-Since this is a social media site, this project is not meant to run locally, The project has been [deployed on heroku](https://frozen-earth-22870.herokuapp.com/) and can be found [here](https://frozen-earth-22870.herokuapp.com/). There are no additional requirements to sign up. Simply make an account and enjoy!
+Since this is a social media site, this project is not meant to run locally, The project has been [deployed on heroku](https://damp-thicket-88352.herokuapp.com/) and can be found [here](https://damp-thicket-88352.herokuapp.com/). There are no additional requirements to sign up. Simply make an account and enjoy!
 <br>
 <br>
             
 ## Usage
-**Frienemies** is [deployed on heroku](https://frozen-earth-22870.herokuapp.com/). 
-* To sign up, please visit [https://frozen-earth-22870.herokuapp.com/](https://frozen-earth-22870.herokuapp.com/).
+**Frienemies** is [deployed on heroku](https://damp-thicket-88352.herokuapp.com/). 
+* To sign up, please visit [https://frozen-earth-22870.herokuapp.com/](https://damp-thicket-88352.herokuapp.com/).
 * Next click on <button> Create Account/Sign In </button>.
 * Enter your first and last name, email address, and desired password. Your password must be at least 8 characters.
 * Click <button> Create Account </button>.
