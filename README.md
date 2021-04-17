@@ -1,6 +1,6 @@
 # **Frienemies**  -  [![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)
     
-Frienemies is new type of social network that allows you to connect with new and interesting people based on hobbies and interests that are different from yours! 
+**Frienemies** is new type of social network that allows you to connect with new and interesting people based on hobbies and interests that are different from yours! 
 
 <code>GIVEN I am the user, WHEN I create an account, THEN I am presented a list of friends with different interests. THEN I CAN add friends based on those things I want to learn more about.</code>
 
@@ -43,25 +43,21 @@ Please feel free to contact us with any questions you might have, using the foll
 
 ### Damian De Leon:
 * Email: [damianmdeleon@gmail.com](mailto:damianmdeleon@gmail.com)
-<br>
 * Github: [https://github.com/damiandeleon](https://github.com/damiandeleon)
 <br>
 
 ### Deanna Alexander:
 * Email: [xander.deanna@gmail.com](mailto:xander.deanna@gmail.com)
-<br>
 * Github: [https://github.com/xander-deanna](https://github.com/xander-deanna)
 <br>
 
 ### Shaquille Oriol:
 * Email: [shaquille.oriol@gmail.com](mailto:shaquille.oriol@gmail.com)
-<br>
 * Github: [https://github.com/ShaquilleOriol](https://github.com/ShaquilleOriol)
 <br>
 
 ### Walter McCone
 * Email: [gerrymccone88@gmail.com](mailto:gerrymccone88@gmail.com)
-<br>
 * Github: [https://github.com/wmccone](https://github.com/wmccone)
 <br>
 

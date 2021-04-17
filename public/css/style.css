@@ -39,11 +39,14 @@ h1 {
   padding: 0px;
   margin: 0px;
 }
+
+
 .signup-btn {
   font-size: large;
 }
 
 /* ------- CLASHES AND FRIENDS PAGE HANDLEBARS ------ */
+
 /* removes bullet from unordered list */
 ul {
   list-style-type: none;

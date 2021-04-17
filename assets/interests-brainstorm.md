@@ -10,7 +10,7 @@ Chess
 Computer Programing
 Cooking
 Crafts
-Danceing
+Dancing
 DJing
 Drawing
 Drink Mixing
@@ -23,8 +23,8 @@ Hiking
 Ice Skating
 Karaoke
 Knitting
-Kyacking
-Livestreaming
+Kayaking
+Live-streaming
 Makeup
 Martial Arts
 Meditation
