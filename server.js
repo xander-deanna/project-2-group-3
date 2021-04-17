@@ -4,6 +4,7 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const helpers = require('./utils/helpers');
+require('dotenv').config()
 
 const sequelize = require('./config/connection');
 
@@ -17,12 +18,11 @@ const PORT = process.env.PORT || 3001;
 // Script to activate and link Cloudinary to cloudinary server files
 const cloudinary = require('cloudinary').v2
 
-cloudinary.config({ 
-  cloud_name: 'superman123', 
-  api_key: '578184698914981', 
-  api_secret: 'dmxZDvNfTwoH5GxYth4zrHfGloM' 
+cloudinary.config({
+  cloud_name: process.env.CLOUD_NAME,
+  api_key: process.env.API_KEY,
+  api_secret: process.env.API_SECRET
 });
-
 //Will integrate handlebars helpers
 const hbs = exphbs.create({ helpers });
 
